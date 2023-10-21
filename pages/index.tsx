@@ -1,14 +1,14 @@
 import { Box } from '@mui/material';
 
-import Skills from '../components/Skills';
-import Projects from '../components/Projects';
 import Main from '../components/Main';
+import SingleClickEditing from '../components/DataGrid';
+import Projects from '../components/Projects';
 
 export default function Home() {
   return (
     <main>
       <Main />
-      <Skills />
+      <SingleClickEditing></SingleClickEditing>
       <Projects />
     </main>
   );

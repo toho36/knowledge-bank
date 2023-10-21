@@ -36,7 +36,6 @@ export default function MainNavigation({
   };
 
   const navLinks = [
-    { text: 'Skills', href: '/#skills' },
     { text: 'Projects', href: '/#projects' },
     {
       text: 'Resume',
@@ -45,7 +44,7 @@ export default function MainNavigation({
   ];
 
   const handleNavLinkClick = (href: string) => {
-    if (href === navLinks[2].href) window.open(href, '_blank');
+    if (href === navLinks[1].href) window.open(href, '_blank');
     // If the clicked link is the "Resume" link, open it in a new tab
     else router.push(href);
     if (isDrawerOpen) toggleDrawer(); // Close the drawer after navigation
@@ -83,13 +82,13 @@ export default function MainNavigation({
               alignItems: 'center',
             }}
           >
-            <Box style={{ width: '200px' }}>
+            <Box style={{ width: '300px' }}>
               <a
                 onClick={() => router.push('/')}
                 target="_blank"
                 rel="noreferrer"
               >
-                <CustomButton fontSize={18}>To Hoang Viet</CustomButton>
+                <CustomButton fontSize={18}>Knowledge Bank</CustomButton>
               </a>
             </Box>
             {/* Display the menu icon when the screen is smaller */}
@@ -129,7 +128,7 @@ export default function MainNavigation({
             sx={{ borderBottom: '1px solid black', cursor: 'pointer' }}
             onClick={handleToHoangVietClick}
           >
-            To Hoang Viet
+            Knowledge Bank
           </Typography>
 
           <List sx={{ marginTop: 2 }}>
